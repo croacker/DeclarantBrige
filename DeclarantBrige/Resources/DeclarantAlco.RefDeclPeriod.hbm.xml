@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="DeclarantBrige" namespace="com.asf.declarantbrige.model" xmlns="urn:nhibernate-mapping-2.2">
+  <class name="RefDeclPeriod" table="ref_declPeriod">
+    <id name="Code" type="String">
+      <column name="code" not-null="false" length="2" sql-type="nvarchar" />
+      <generator class="assigned" />
+    </id>
+    <property name="Descr" type="String">
+      <column name="Descr" not-null="false" length="100" sql-type="nvarchar" />
+    </property>
+  </class>
+</hibernate-mapping>

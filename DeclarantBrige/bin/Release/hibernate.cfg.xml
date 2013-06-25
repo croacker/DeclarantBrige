@@ -1,0 +1,46 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<hibernate-configuration  xmlns="urn:nhibernate-configuration-2.2">
+
+  <session-factory name="NHibernate.DeclarantAlco">
+
+    <property name="connection.provider">NHibernate.Connection.DriverConnectionProvider</property>
+    <property name="connection.driver_class">NHibernate.Driver.SqlServerCeDriver</property>
+    <property name="dialect">NHibernate.Dialect.MsSqlCeDialect</property>
+    <property name="connection.connection_string">Data Source=c:\1\declarant\3811143767_base.sdf;Password='7338a7e6-fd3b-49d1-8d90-ddbbc1b39fa1';</property>
+
+    <mapping assembly="DeclarantBrige" resource="DeclarantBrige.Resources.DeclarantAlco.DecF1.hbm.xml"/>
+    <mapping assembly="DeclarantBrige" resource="DeclarantBrige.Resources.DeclarantAlco.DecF2.hbm.xml"/>
+    <mapping assembly="DeclarantBrige" resource="DeclarantBrige.Resources.DeclarantAlco.DecF3.hbm.xml"/>
+    <mapping assembly="DeclarantBrige" resource="DeclarantBrige.Resources.DeclarantAlco.DecF4.hbm.xml"/>
+    <mapping assembly="DeclarantBrige" resource="DeclarantBrige.Resources.DeclarantAlco.DecF5.hbm.xml"/>
+    <mapping assembly="DeclarantBrige" resource="DeclarantBrige.Resources.DeclarantAlco.DecF6.hbm.xml"/>
+    <mapping assembly="DeclarantBrige" resource="DeclarantBrige.Resources.DeclarantAlco.DecF7.hbm.xml"/>
+    <mapping assembly="DeclarantBrige" resource="DeclarantBrige.Resources.DeclarantAlco.DecF8.hbm.xml"/>
+    <mapping assembly="DeclarantBrige" resource="DeclarantBrige.Resources.DeclarantAlco.DecF9.hbm.xml"/>
+    <mapping assembly="DeclarantBrige" resource="DeclarantBrige.Resources.DeclarantAlco.DecF10.hbm.xml"/>
+    <mapping assembly="DeclarantBrige" resource="DeclarantBrige.Resources.DeclarantAlco.DecF11.hbm.xml"/>
+    <mapping assembly="DeclarantBrige" resource="DeclarantBrige.Resources.DeclarantAlco.DecF12.hbm.xml"/>
+    <mapping assembly="DeclarantBrige" resource="DeclarantBrige.Resources.DeclarantAlco.DecHeader.hbm.xml"/>
+    <mapping assembly="DeclarantBrige" resource="DeclarantBrige.Resources.DeclarantAlco.KLADRRegion.hbm.xml"/>
+    <mapping assembly="DeclarantBrige" resource="DeclarantBrige.Resources.DeclarantAlco.Proxy.hbm.xml"/>
+    <mapping assembly="DeclarantBrige" resource="DeclarantBrige.Resources.DeclarantAlco.RefAlckind.hbm.xml"/>
+    <mapping assembly="DeclarantBrige" resource="DeclarantBrige.Resources.DeclarantAlco.RefDeclform.hbm.xml"/>
+    <mapping assembly="DeclarantBrige" resource="DeclarantBrige.Resources.DeclarantAlco.RefDeclPeriod.hbm.xml"/>
+    <mapping assembly="DeclarantBrige" resource="DeclarantBrige.Resources.DeclarantAlco.RefFotch.hbm.xml"/>
+    <mapping assembly="DeclarantBrige" resource="DeclarantBrige.Resources.DeclarantAlco.RefLicType.hbm.xml"/>
+    <mapping assembly="DeclarantBrige" resource="DeclarantBrige.Resources.DeclarantAlco.RefTypedec.hbm.xml"/>
+    <mapping assembly="DeclarantBrige" resource="DeclarantBrige.Resources.DeclarantAlco.RefTypeProduce.hbm.xml"/>
+    <mapping assembly="DeclarantBrige" resource="DeclarantBrige.Resources.DeclarantAlco.RefTypeTraffic.hbm.xml"/>
+    <mapping assembly="DeclarantBrige" resource="DeclarantBrige.Resources.DeclarantAlco.SysPinfo.hbm.xml"/>
+    <mapping assembly="DeclarantBrige" resource="DeclarantBrige.Resources.DeclarantAlco.TempContr8.hbm.xml"/>
+    <mapping assembly="DeclarantBrige" resource="DeclarantBrige.Resources.DeclarantAlco.TempT.hbm.xml"/>
+    <mapping assembly="DeclarantBrige" resource="DeclarantBrige.Resources.DeclarantAlco.WrkContragent.hbm.xml"/>
+    <mapping assembly="DeclarantBrige" resource="DeclarantBrige.Resources.DeclarantAlco.WrkContrLicense.hbm.xml"/>
+    <mapping assembly="DeclarantBrige" resource="DeclarantBrige.Resources.DeclarantAlco.WrkOrg.hbm.xml"/>
+    <mapping assembly="DeclarantBrige" resource="DeclarantBrige.Resources.DeclarantAlco.WrkOrganization.hbm.xml"/>
+    <mapping assembly="DeclarantBrige" resource="DeclarantBrige.Resources.DeclarantAlco.WrkOrgLicense.hbm.xml"/>
+    <mapping assembly="DeclarantBrige" resource="DeclarantBrige.Resources.DeclarantAlco.WrkOrgPerson.hbm.xml"/>
+
+  </session-factory>
+
+</hibernate-configuration>

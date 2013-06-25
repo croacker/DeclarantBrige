@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="DeclarantBrige" namespace="com.asf.declarantbrige.model" xmlns="urn:nhibernate-mapping-2.2">
+  <class name="DecF2" table="DecF2">
+    <id name="Id" type="Int32">
+      <column name="id" not-null="true" precision="10" sql-type="int" />
+      <generator class="identity" />
+    </id>
+    <property name="Hid" type="Int32">
+      <column name="Hid" not-null="true" precision="10" sql-type="int" />
+    </property>
+    <property name="VidCode" type="String">
+      <column name="vidCode" not-null="false" length="4" sql-type="nvarchar" />
+    </property>
+    <property name="P3" type="Decimal">
+      <column name="P3" not-null="false" precision="15" scale="5" sql-type="numeric" />
+    </property>
+    <property name="P4" type="Decimal">
+      <column name="P4" not-null="false" precision="15" scale="5" sql-type="numeric" />
+    </property>
+    <property name="P5" type="Decimal">
+      <column name="P5" not-null="false" precision="15" scale="5" sql-type="numeric" />
+    </property>
+    <property name="P6" type="Decimal">
+      <column name="P6" not-null="false" precision="15" scale="5" sql-type="numeric" />
+    </property>
+    <property name="P7" type="Decimal">
+      <column name="P7" not-null="false" precision="15" scale="5" sql-type="numeric" />
+    </property>
+    <property name="P8" type="Decimal">
+      <column name="P8" not-null="false" precision="15" scale="5" sql-type="numeric" />
+    </property>
+    <property name="P9" type="Decimal">
+      <column name="P9" not-null="false" precision="15" scale="5" sql-type="numeric" />
+    </property>
+    <property name="P10" type="Decimal">
+      <column name="P10" not-null="false" precision="15" scale="5" sql-type="numeric" />
+    </property>
+    <property name="P11" type="Decimal">
+      <column name="P11" not-null="false" precision="15" scale="5" sql-type="numeric" />
+    </property>
+    <property name="P12" type="Decimal">
+      <column name="P12" not-null="false" precision="15" scale="5" sql-type="numeric" />
+    </property>
+    <property name="P13" type="Decimal">
+      <column name="P13" not-null="false" precision="15" scale="5" sql-type="numeric" />
+    </property>
+    <property name="P14" type="Decimal">
+      <column name="P14" not-null="false" precision="15" scale="5" sql-type="numeric" />
+    </property>
+    <property name="P15" type="Decimal">
+      <column name="P15" not-null="false" precision="15" scale="5" sql-type="numeric" />
+    </property>
+    <property name="P16" type="Decimal">
+      <column name="P16" not-null="false" precision="15" scale="5" sql-type="numeric" />
+    </property>
+    <property name="P17" type="Decimal">
+      <column name="P17" not-null="false" precision="15" scale="5" sql-type="numeric" />
+    </property>
+    <property name="P18" type="Decimal">
+      <column name="P18" not-null="false" precision="15" scale="5" sql-type="numeric" />
+    </property>
+    <property name="P19" type="Decimal">
+      <column name="P19" not-null="false" precision="15" scale="5" sql-type="numeric" />
+    </property>
+    <property name="IdOrg" type="String">
+      <column name="idOrg" not-null="true" length="100" sql-type="nvarchar" />
+    </property>
+    <property name="P33" type="Decimal">
+      <column name="p33" not-null="false" precision="15" scale="5" sql-type="numeric" />
+    </property>
+  </class>
+</hibernate-mapping>

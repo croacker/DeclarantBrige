@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="DeclarantBrige" namespace="com.asf.declarantbrige.model" xmlns="urn:nhibernate-mapping-2.2">
+  <class name="Proxy" table="Proxy">
+    <id name="Id" type="Int32">
+      <column name="id" not-null="true" precision="10" sql-type="int" />
+      <generator class="identity" />
+    </id>
+    <property name="Exist" type="Int32">
+      <column name="exist" not-null="true" precision="10" sql-type="int" />
+    </property>
+    <property name="Http" type="String">
+      <column name="http" not-null="true" length="15" sql-type="nvarchar" />
+    </property>
+    <property name="Port" type="Int32">
+      <column name="port" not-null="true" precision="10" sql-type="int" />
+    </property>
+    <property name="Name" type="String">
+      <column name="name" not-null="true" length="30" sql-type="nvarchar" />
+    </property>
+    <property name="Password" type="String">
+      <column name="password" not-null="true" length="32" sql-type="nvarchar" />
+    </property>
+  </class>
+</hibernate-mapping>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="DeclarantBrige" namespace="com.asf.declarantbrige.model" xmlns="urn:nhibernate-mapping-2.2">
+  <class name="WrkOrg" table="wrk_org">
+    <id name="Id" type="Int32">
+      <column name="id" not-null="true" precision="10" sql-type="int" />
+      <generator class="identity" />
+    </id>
+    <property name="INN" type="String">
+      <column name="INN" not-null="false" length="12" sql-type="nvarchar" />
+    </property>
+    <property name="KPP" type="String">
+      <column name="KPP" not-null="false" length="9" sql-type="nvarchar" />
+    </property>
+    <property name="OrgName" type="String">
+      <column name="OrgName" not-null="false" length="1000" sql-type="nvarchar" />
+    </property>
+    <property name="Phone" type="String">
+      <column name="Phone" not-null="false" length="100" sql-type="nvarchar" />
+    </property>
+    <property name="Email" type="String">
+      <column name="Email" not-null="false" length="100" sql-type="nvarchar" />
+    </property>
+    <property name="CCode" type="String">
+      <column name="CCode" not-null="false" length="3" sql-type="nvarchar" />
+    </property>
+    <property name="Index" type="String">
+      <column name="`Index`" not-null="false" length="10" sql-type="nvarchar" />
+    </property>
+    <property name="Rcode" type="String">
+      <column name="Rcode" not-null="false" length="2" sql-type="nvarchar" />
+    </property>
+    <property name="Area" type="String">
+      <column name="Area" not-null="false" length="50" sql-type="nvarchar" />
+    </property>
+    <property name="City" type="String">
+      <column name="City" not-null="false" length="50" sql-type="nvarchar" />
+    </property>
+    <property name="Place" type="String">
+      <column name="Place" not-null="false" length="50" sql-type="nvarchar" />
+    </property>
+    <property name="Street" type="String">
+      <column name="Street" not-null="false" length="50" sql-type="nvarchar" />
+    </property>
+    <property name="Building" type="String">
+      <column name="Building" not-null="false" length="20" sql-type="nvarchar" />
+    </property>
+    <property name="Korp" type="String">
+      <column name="Korp" not-null="false" length="20" sql-type="nvarchar" />
+    </property>
+    <property name="Flat" type="String">
+      <column name="Flat" not-null="false" length="20" sql-type="nvarchar" />
+    </property>
+    <property name="HeadId" type="Int32">
+      <column name="Head_id" not-null="false" precision="10" sql-type="int" />
+    </property>
+    <property name="OrgType" type="Int32">
+      <column name="OrgType" not-null="false" precision="10" sql-type="int" />
+    </property>
+    <property name="DirID" type="Int32">
+      <column name="DirID" not-null="false" precision="10" sql-type="int" />
+    </property>
+    <property name="BuhID" type="Int32">
+      <column name="BuhID" not-null="false" precision="10" sql-type="int" />
+    </property>
+    <property name="Liter" type="String">
+      <column name="Liter" not-null="false" length="50" sql-type="nvarchar" />
+    </property>
+  </class>
+</hibernate-mapping>

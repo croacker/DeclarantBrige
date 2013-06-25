@@ -1,0 +1,463 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{76874105-20D9-4F0F-B2AA-65BC24B7D165}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DeclarantBrige</RootNamespace>
+    <AssemblyName>DeclarantBrige</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>app.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Common.Logging">
+      <HintPath>lib\Common.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Iesi.Collections">
+      <HintPath>lib\Iesi.Collections.dll</HintPath>
+    </Reference>
+    <Reference Include="Ionic.Zip">
+      <HintPath>lib\Ionic.Zip.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net">
+      <HintPath>lib\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate">
+      <HintPath>lib\NHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="Spring.Core">
+      <HintPath>lib\Spring.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SqlServerCe, Version=3.5.1.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="com\asf\collection\HashMap.cs" />
+    <Compile Include="com\asf\component\controls\FolderChoose.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="com\asf\component\controls\FolderChoose.Designer.cs">
+      <DependentUpon>FolderChoose.cs</DependentUpon>
+    </Compile>
+    <Compile Include="com\asf\component\controls\ICtrlLogger.cs" />
+    <Compile Include="com\asf\component\controls\LogListBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="com\asf\configuration\AbstractConfiguration.cs" />
+    <Compile Include="com\asf\context\AbstractContext.cs" />
+    <Compile Include="com\asf\declarantbrige\AbstractContext.cs" />
+    <Compile Include="com\asf\declarantbrige\checker\DeclarationChecker.cs" />
+    <Compile Include="com\asf\declarantbrige\checker\IModelChecker.cs" />
+    <Compile Include="com\asf\declarantbrige\configuration\AppConfiguration.cs" />
+    <Compile Include="com\asf\declarantbrige\configuration\DeclarantConfiguration.cs" />
+    <Compile Include="com\asf\declarantbrige\csv\ContragentCsv.cs" />
+    <Compile Include="com\asf\declarantbrige\csv\CsvFactory.cs" />
+    <Compile Include="com\asf\declarantbrige\csv\Declaration11Csv.cs" />
+    <Compile Include="com\asf\declarantbrige\csv\Declaration12Csv.cs" />
+    <Compile Include="com\asf\declarantbrige\csv\DeclarationCsv.cs" />
+    <Compile Include="com\asf\declarantbrige\FormContext.cs" />
+    <Compile Include="com\asf\declarantbrige\forms\AboutForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="com\asf\declarantbrige\forms\AboutForm.Designer.cs">
+      <DependentUpon>AboutForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="com\asf\declarantbrige\forms\DeclarationsJournal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="com\asf\declarantbrige\forms\DeclarationsJournal.Designer.cs">
+      <DependentUpon>DeclarationsJournal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="com\asf\declarantbrige\forms\DocumentListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="com\asf\declarantbrige\forms\DocumentListForm.Designer.cs">
+      <DependentUpon>DocumentListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="com\asf\declarantbrige\forms\FormFactory.cs" />
+    <Compile Include="com\asf\declarantbrige\forms\ImportDeclarationWizardFrom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="com\asf\declarantbrige\forms\ImportDeclarationWizardFrom.Designer.cs">
+      <DependentUpon>ImportDeclarationWizardFrom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="com\asf\declarantbrige\forms\ReferenceListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="com\asf\declarantbrige\forms\ReferenceListForm.Designer.cs">
+      <DependentUpon>ReferenceListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="com\asf\declarantbrige\forms\OrganizationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="com\asf\declarantbrige\forms\OrganizationForm.Designer.cs">
+      <DependentUpon>OrganizationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="com\asf\declarantbrige\forms\PropertiesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="com\asf\declarantbrige\forms\PropertiesForm.Designer.cs">
+      <DependentUpon>PropertiesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="com\asf\declarantbrige\forms\UnitForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="com\asf\declarantbrige\forms\UnitForm.Designer.cs">
+      <DependentUpon>UnitForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="com\asf\declarantbrige\ModelFactory.cs" />
+    <Compile Include="com\asf\declarantbrige\model\AbstractModel.cs" />
+    <Compile Include="com\asf\declarantbrige\model\database\DeclarantDatabaseModel.cs" />
+    <Compile Include="com\asf\declarantbrige\model\proxy\DecHeaderProxy.cs" />
+    <Compile Include="com\asf\declarantbrige\model\DeclarantAlco.DecF1.cs" />
+    <Compile Include="com\asf\declarantbrige\model\DeclarantAlco.DecF10.cs" />
+    <Compile Include="com\asf\declarantbrige\model\DeclarantAlco.DecF11.cs" />
+    <Compile Include="com\asf\declarantbrige\model\DeclarantAlco.DecF12.cs" />
+    <Compile Include="com\asf\declarantbrige\model\DeclarantAlco.DecF2.cs" />
+    <Compile Include="com\asf\declarantbrige\model\DeclarantAlco.DecF3.cs" />
+    <Compile Include="com\asf\declarantbrige\model\DeclarantAlco.DecF4.cs" />
+    <Compile Include="com\asf\declarantbrige\model\DeclarantAlco.DecF5.cs" />
+    <Compile Include="com\asf\declarantbrige\model\DeclarantAlco.DecF6.cs" />
+    <Compile Include="com\asf\declarantbrige\model\DeclarantAlco.DecF7.cs" />
+    <Compile Include="com\asf\declarantbrige\model\DeclarantAlco.DecF8.cs" />
+    <Compile Include="com\asf\declarantbrige\model\DeclarantAlco.DecF9.cs" />
+    <Compile Include="com\asf\declarantbrige\model\DeclarantAlco.DecHeader.cs" />
+    <Compile Include="com\asf\declarantbrige\model\DeclarantAlco.KLADRRegion.cs" />
+    <Compile Include="com\asf\declarantbrige\model\DeclarantAlco.Proxy.cs" />
+    <Compile Include="com\asf\declarantbrige\model\DeclarantAlco.RefAlckind.cs" />
+    <Compile Include="com\asf\declarantbrige\model\DeclarantAlco.RefDeclform.cs" />
+    <Compile Include="com\asf\declarantbrige\model\DeclarantAlco.RefDeclPeriod.cs" />
+    <Compile Include="com\asf\declarantbrige\model\DeclarantAlco.RefFotch.cs" />
+    <Compile Include="com\asf\declarantbrige\model\DeclarantAlco.RefLicType.cs" />
+    <Compile Include="com\asf\declarantbrige\model\DeclarantAlco.RefTypedec.cs" />
+    <Compile Include="com\asf\declarantbrige\model\DeclarantAlco.RefTypeProduce.cs" />
+    <Compile Include="com\asf\declarantbrige\model\DeclarantAlco.RefTypeTraffic.cs" />
+    <Compile Include="com\asf\declarantbrige\model\DeclarantAlco.SysPinfo.cs" />
+    <Compile Include="com\asf\declarantbrige\model\DeclarantAlco.TempContr8.cs" />
+    <Compile Include="com\asf\declarantbrige\model\DeclarantAlco.TempT.cs" />
+    <Compile Include="com\asf\declarantbrige\model\DeclarantAlco.WrkContragent.cs" />
+    <Compile Include="com\asf\declarantbrige\model\DeclarantAlco.WrkContrLicense.cs" />
+    <Compile Include="com\asf\declarantbrige\model\DeclarantAlco.WrkOrg.cs" />
+    <Compile Include="com\asf\declarantbrige\model\DeclarantAlco.WrkOrganization.cs" />
+    <Compile Include="com\asf\declarantbrige\model\DeclarantAlco.WrkOrgLicense.cs" />
+    <Compile Include="com\asf\declarantbrige\model\DeclarantAlco.WrkOrgPerson.cs" />
+    <Compile Include="com\asf\declarantbrige\AbstractFactory.cs" />
+    <Compile Include="com\asf\declarantbrige\model\proxy\IHibernateModelProxy.cs" />
+    <Compile Include="com\asf\declarantbrige\model\proxy\WrkOrgProxy.cs" />
+    <Compile Include="com\asf\declarantbrige\processing\ContragentsHandler.cs" />
+    <Compile Include="com\asf\declarantbrige\processing\Declaration11HandlerCsv.cs" />
+    <Compile Include="com\asf\declarantbrige\processing\Declaration11HandlerXml.cs" />
+    <Compile Include="com\asf\declarantbrige\processing\Declaration12HandlerCsv.cs" />
+    <Compile Include="com\asf\declarantbrige\processing\Declaration12HandlerXml.cs" />
+    <Compile Include="com\asf\declarantbrige\processing\DeclarationHandler.cs" />
+    <Compile Include="com\asf\declarantbrige\processing\IDeclarationHandler.cs" />
+    <Compile Include="com\asf\declarantbrige\processing\IProcessingHandler.cs" />
+    <Compile Include="com\asf\declarantbrige\processing\ProcessingFactory.cs" />
+    <Compile Include="com\asf\declarantbrige\processing\ProcessingHandler.cs" />
+    <Compile Include="com\asf\declarantbrige\service\AbstractService.cs" />
+    <Compile Include="com\asf\declarantbrige\service\BackUpService.cs" />
+    <Compile Include="com\asf\declarantbrige\service\CheckService.cs" />
+    <Compile Include="com\asf\declarantbrige\service\ConfigurationService.cs" />
+    <Compile Include="com\asf\declarantbrige\service\ContextService.cs" />
+    <Compile Include="com\asf\declarantbrige\service\CsvService.cs" />
+    <Compile Include="com\asf\declarantbrige\service\HibernateService.cs" />
+    <Compile Include="com\asf\declarantbrige\processing\IProcessingService.cs" />
+    <Compile Include="com\asf\declarantbrige\service\ProcessingService.cs" />
+    <Compile Include="com\asf\declarantbrige\ServiceFactory.cs" />
+    <Compile Include="com\asf\declarantbrige\service\SqlService.cs" />
+    <Compile Include="com\asf\declarantbrige\service\XmlService.cs" />
+    <Compile Include="com\asf\declarantbrige\xml\import_contr.cs" />
+    <Compile Include="com\asf\declarantbrige\xml\import_decl_11.cs" />
+    <Compile Include="com\asf\declarantbrige\xml\import_decl_12.cs" />
+    <Compile Include="com\asf\declarantbrige\forms\BaseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="com\asf\declarantbrige\forms\BaseForm.Designer.cs">
+      <DependentUpon>BaseForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="com\asf\declarantbrige\forms\ChooseList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="com\asf\declarantbrige\forms\ChooseList.Designer.cs">
+      <DependentUpon>ChooseList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="com\asf\declarantbrige\forms\ContragentsReference.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="com\asf\declarantbrige\forms\ContragentsReference.Designer.cs">
+      <DependentUpon>ContragentsReference.cs</DependentUpon>
+    </Compile>
+    <Compile Include="com\asf\declarantbrige\forms\ContragentsUnit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="com\asf\declarantbrige\forms\ContragentsUnit.Designer.cs">
+      <DependentUpon>ContragentsUnit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="com\asf\util\ApplicationUtil.cs" />
+    <Compile Include="com\asf\util\ConnectionStringHelper.cs" />
+    <Compile Include="com\asf\util\ConvertUtil.cs" />
+    <Compile Include="com\asf\util\FsUtil.cs" />
+    <Compile Include="com\asf\util\ShellArgumentProcessor.cs" />
+    <Compile Include="MainFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainFrm.Designer.cs">
+      <DependentUpon>MainFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="com\asf\component\controls\FolderChoose.resx">
+      <DependentUpon>FolderChoose.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="com\asf\declarantbrige\forms\AboutForm.resx">
+      <DependentUpon>AboutForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="com\asf\declarantbrige\forms\BaseForm.resx">
+      <DependentUpon>BaseForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="com\asf\declarantbrige\forms\ChooseList.resx">
+      <DependentUpon>ChooseList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="com\asf\declarantbrige\forms\ContragentsReference.resx">
+      <DependentUpon>ContragentsReference.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="com\asf\declarantbrige\forms\DeclarationsJournal.resx">
+      <DependentUpon>DeclarationsJournal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="com\asf\declarantbrige\forms\DocumentListForm.resx">
+      <DependentUpon>DocumentListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="com\asf\declarantbrige\forms\ReferenceListForm.resx">
+      <DependentUpon>ReferenceListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="com\asf\declarantbrige\forms\OrganizationForm.resx">
+      <DependentUpon>OrganizationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="com\asf\declarantbrige\forms\PropertiesForm.resx">
+      <DependentUpon>PropertiesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="com\asf\declarantbrige\forms\UnitForm.resx">
+      <DependentUpon>UnitForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainFrm.resx">
+      <DependentUpon>MainFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="app.ico" />
+    <Content Include="hibernate.cfg.xml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="res\check.png" />
+    <None Include="res\logo.png" />
+    <None Include="res\erase.png" />
+    <None Include="res\close.png" />
+    <None Include="res\help.png" />
+    <None Include="res\properties.png" />
+    <None Include="res\database_conn.png" />
+    <None Include="res\database.png" />
+    <None Include="res\open.png" />
+    <None Include="res\refresh.png" />
+    <EmbeddedResource Include="Resources\DeclarantAlco.DecF1.hbm.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\DeclarantAlco.DecF10.hbm.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\DeclarantAlco.DecF2.hbm.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\DeclarantAlco.DecF3.hbm.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\DeclarantAlco.DecF4.hbm.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\DeclarantAlco.DecF5.hbm.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\DeclarantAlco.DecF6.hbm.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\DeclarantAlco.DecF7.hbm.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\DeclarantAlco.DecF8.hbm.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\DeclarantAlco.DecF9.hbm.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\DeclarantAlco.KLADRRegion.hbm.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\DeclarantAlco.Proxy.hbm.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\DeclarantAlco.RefAlckind.hbm.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\DeclarantAlco.RefDeclform.hbm.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\DeclarantAlco.RefDeclPeriod.hbm.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\DeclarantAlco.RefFotch.hbm.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\DeclarantAlco.RefLicType.hbm.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\DeclarantAlco.RefTypedec.hbm.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\DeclarantAlco.RefTypeProduce.hbm.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\DeclarantAlco.RefTypeTraffic.hbm.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\DeclarantAlco.SysPinfo.hbm.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\DeclarantAlco.TempContr8.hbm.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\DeclarantAlco.TempT.hbm.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\DeclarantAlco.DecF11.hbm.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\DeclarantAlco.DecF12.hbm.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\DeclarantAlco.DecHeader.hbm.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\DeclarantAlco.WrkContragent.hbm.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\DeclarantAlco.WrkContrLicense.hbm.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\DeclarantAlco.WrkOrg.hbm.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\DeclarantAlco.WrkOrganization.hbm.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\DeclarantAlco.WrkOrgLicense.hbm.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\DeclarantAlco.WrkOrgPerson.hbm.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="com\asf\declarantbrige\context\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>Клиентский профиль .NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Установщик Windows 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

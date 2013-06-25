@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="DeclarantBrige" namespace="com.asf.declarantbrige.model" xmlns="urn:nhibernate-mapping-2.2">
+  <class name="DecHeader" table="DecHeader">
+    <id name="Id" type="Int32">
+      <column name="id" not-null="true" precision="10" sql-type="int" />
+      <generator class="identity" />
+    </id>
+    <property name="TypeId" type="Int32">
+      <column name="type_id" not-null="false" precision="10" sql-type="int" />
+    </property>
+    <property name="PrizPeriod" type="String">
+      <column name="PrizPeriod" not-null="false" length="1" sql-type="nvarchar" />
+    </property>
+    <property name="PrizFotch" type="Int32">
+      <column name="PrizFotch" not-null="false" precision="10" sql-type="int" />
+    </property>
+    <property name="Yearotch" type="Int32">
+      <column name="Yearotch" not-null="false" precision="10" sql-type="int" />
+    </property>
+    <property name="TypePK" type="Int32">
+      <column name="typePK" not-null="false" precision="10" sql-type="int" />
+    </property>
+    <property name="KorrNum" type="String">
+      <column name="korrNum" not-null="false" length="4" sql-type="nchar" />
+    </property>
+    <property name="Lics" type="String">
+      <column name="Lics" not-null="false" length="100" sql-type="nvarchar" />
+    </property>
+    <property name="WhereSubmit" type="String">
+      <column name="where_submit" not-null="false" length="250" sql-type="nvarchar" />
+    </property>
+    
+    <set name="Lines11" inverse="true" cascade="all" lazy="false">
+      <key column="Hid"/>
+      <one-to-many class="DecF11"/>
+    </set>
+
+    <set name="Lines12" inverse="true" cascade="all" lazy="false">
+      <key column="Hid"/>
+      <one-to-many class="DecF12"/>
+    </set>
+    
+  </class>
+</hibernate-mapping>

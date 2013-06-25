@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="DeclarantBrige" namespace="com.asf.declarantbrige.model" xmlns="urn:nhibernate-mapping-2.2">
+  <class name="WrkOrganization" table="wrk_organization">
+    <id name="Id" type="Int32">
+      <column name="id" not-null="true" precision="10" sql-type="int" unique="true" />
+      <generator class="identity" />
+    </id>
+    <property name="FullName" type="String">
+      <column name="FullName" not-null="true" length="300" sql-type="nvarchar" />
+    </property>
+    <property name="ShortName" type="String">
+      <column name="ShortName" not-null="true" length="100" sql-type="nvarchar" />
+    </property>
+    <property name="INN" type="String">
+      <column name="INN" not-null="true" length="12" sql-type="nvarchar" />
+    </property>
+    <property name="KPP" type="String">
+      <column name="KPP" not-null="false" length="9" sql-type="nvarchar" />
+    </property>
+    <property name="OGRN" type="String">
+      <column name="OGRN" not-null="false" length="15" sql-type="nvarchar" />
+    </property>
+    <property name="OKATO" type="String">
+      <column name="OKATO" not-null="false" length="12" sql-type="nvarchar" />
+    </property>
+    <property name="Phone" type="String">
+      <column name="Phone" not-null="false" length="25" sql-type="nvarchar" />
+    </property>
+    <property name="Addres" type="String">
+      <column name="Addres" not-null="true" length="300" sql-type="nvarchar" />
+    </property>
+    <property name="HeadId" type="Int32">
+      <column name="Head_id" not-null="false" precision="10" sql-type="int" />
+    </property>
+    <property name="OrgType" type="Int32">
+      <column name="OrgType" not-null="true" precision="10" sql-type="int" />
+    </property>
+    <property name="DirID" type="Int32">
+      <column name="DirID" not-null="false" precision="10" sql-type="int" />
+    </property>
+    <property name="BuhID" type="Int32">
+      <column name="BuhID" not-null="false" precision="10" sql-type="int" />
+    </property>
+  </class>
+</hibernate-mapping>
