@@ -9,7 +9,7 @@ using com.asf.declarantbrige.model.proxy;
 using com.asf.declarantbrige.processing;
 using declarant.xml;
 using log4net;
-
+//TODO Split to strategies
 namespace com.asf.declarantbrige.service {
 
     /// <summary>
@@ -589,11 +589,13 @@ namespace com.asf.declarantbrige.service {
 
             //Движения!!!
             foreach (var document in declaration12Csv.Invoices) {
-                DecF11 decF11 = modelFactory.createLine11();
+                DecF12 decF12 = modelFactory.createLine12();
 
+                string alcoholCode = document.VidCode;
                 string producerInn = document.ProdInn;
                 string producerKpp = document.ProdKpp;
                 string producerName = document.ProdName;
+
                 //Производитель
                 WrkContragent producerContragent = getContragentByName(producerName);
                 if (producerContragent == null) {
@@ -604,30 +606,19 @@ namespace com.asf.declarantbrige.service {
                     }
                 }
 
-                decF11.VidCode = document.VidCode;
-                decF11.IdOrg = wrkOrg.Id.ToString();
-                decF11.ProdId = producerContragent.Id;
-                decF11.TTYPE = 2;
+                decF12.VidCode = alcoholCode;
+                decF12.IdOrg = wrkOrg.Id.ToString();
+                decF12.ProdId = producerContragent.Id;
+                decF12.TTYPE = 2;
 
-                WrkContragent supplierContragent = getContragentByInn(document.SupplierInn);
-                if (supplierContragent == null) {
-                    addLogLine("Не найден Поставщик с ИНН: " + document.SupplierInn);
-                    continue;
-                }
+                decF12.IdPost = producerContragent.Id;
 
-                decF11.IdPost = supplierContragent.Id;
-                if (supplierContragent.Licenses.Count != 0) {
-                    IEnumerator<WrkContrLicense> e = supplierContragent.Licenses.GetEnumerator();
-                    e.MoveNext();
-                    decF11.IdLic = e.Current.Id;
-                }
+                decF12.P29 = document.P29;
+                decF12.P210 = document.P210;
+                decF12.P211 = document.P211;
+                decF12.P212 = document.P212;
 
-                decF11.P213 = document.P29;
-                decF11.P214 = document.P210;
-                decF11.P215 = document.P211;
-                decF11.P216 = document.P212;
-
-                decHeader.addLine11(decF11);
+                decHeader.addLine12(decF12);
             }
 
             decHeader.calcRemains11();
