@@ -590,9 +590,14 @@ namespace com.asf.declarantbrige.service {
                 DecF12 decF12 = modelFactory.createLine12();
 
                 string alcoholCode = document.VidCode;
+
                 string producerInn = document.ProdInn;
                 string producerKpp = document.ProdKpp;
                 string producerName = document.ProdName;
+
+                string suplierInn = document.SupplierInn;
+                string suplierKpp = document.SupplierKpp;
+                string suplierName = document.SupplierInn;
 
                 //Производитель
                 WrkContragent producerContragent = getContragentByName(producerName);
@@ -604,12 +609,20 @@ namespace com.asf.declarantbrige.service {
                     }
                 }
 
+                WrkContragent suplierContragent = getContragentByName(suplierName);
+                if (suplierContragent == null) {
+                    suplierContragent = getContragentByInnKpp(suplierInn, suplierKpp);
+                    if (suplierContragent == null) {
+                        addLogLine("Не найден Производитель " + suplierName + " " + suplierInn);
+                        continue;
+                    }
+                }
+
                 decF12.VidCode = alcoholCode;
                 decF12.IdOrg = wrkOrg.Id.ToString();
                 decF12.ProdId = producerContragent.Id;
+                decF12.IdPost = suplierContragent.Id;
                 decF12.TTYPE = 2;
-
-                decF12.IdPost = producerContragent.Id;
 
                 decF12.P29 = document.P29;
                 decF12.P210 = document.P210;
