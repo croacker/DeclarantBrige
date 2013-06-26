@@ -621,7 +621,7 @@ namespace com.asf.declarantbrige.service {
                 decHeader.addLine12(decF12);
             }
 
-            decHeader.calcRemains11();
+            decHeader.calcRemains12();
             addLogLine("Сохранение декларации 11, количество строк:" + decHeader.Lines11.Count);
             ServiceFactory.getInstance().HibernateService.saveOrUpdate(decHeader);
         }
