@@ -1,8 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.IO;
 using System.Windows.Forms;
-using Spring.Context;
-using Spring.Context.Support;
 using com.asf.declarantbrige.csv;
 using com.asf.declarantbrige.model;
 using com.asf.declarantbrige.model.proxy;
