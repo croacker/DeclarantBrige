@@ -6,6 +6,7 @@ using com.asf.declarantbrige.model;
 using com.asf.declarantbrige.model.proxy;
 using com.asf.declarantbrige.processing;
 using declarant.xml;
+using DeclarantBrige.com.asf.declarantbrige.service.xml;
 using log4net;
 //TODO Split to strategies
 namespace com.asf.declarantbrige.service {

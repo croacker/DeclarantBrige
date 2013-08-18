@@ -120,6 +120,7 @@
             this.ClientSize = new System.Drawing.Size(292, 237);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.tsBar);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Name = "ReferenceListForm";
             this.Shown += new System.EventHandler(this.ListForm_Shown);
             this.tsBar.ResumeLayout(false);

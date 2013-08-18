@@ -1,11 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
+﻿using System.IO;
 using System.Text;
 using com.asf.declarantbrige.csv;
+using com.asf.declarantbrige.service;
 
-namespace com.asf.declarantbrige.service {
+namespace DeclarantBrige.com.asf.declarantbrige.service.csv {
 
     /// <summary>
     /// Сервис работы с CSV файлами обмена

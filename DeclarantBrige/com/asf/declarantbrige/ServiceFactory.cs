@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using com.asf.declarantbrige.service;
+using DeclarantBrige.com.asf.declarantbrige.service.csv;
+using DeclarantBrige.com.asf.declarantbrige.service.xml;
 using NHibernate;
 using Spring.Context;
 using com.asf.declarantbrige.service;

@@ -200,15 +200,18 @@ namespace DeclarantBrige {
 
         private void openOrganizationReference()
         {
-            FormFactory.getInstance().showUnitForm(typeof(OrganizationForm), context);
+            Form form = FormFactory.getInstance().getUnitForm(typeof(OrganizationForm), context);
+            form.Show(FormFactory.getInstance().MainForm);
         }
 
         private void openContragentsReference() {
-            FormFactory.getInstance().showReferenceListForm(typeof(ContragentsReference), context);
+            Form form = FormFactory.getInstance().getReferenceList(typeof(ContragentsReference), context);
+            form.Show(FormFactory.getInstance().MainForm);
         }
 
         private void openDeclarationJournal() {
-            FormFactory.getInstance().showDocumentsListForm(typeof(DeclarationsJournal), context);
+            Form form = FormFactory.getInstance().getDocumentsList(typeof(DeclarationsJournal), context);
+            form.Show(FormFactory.getInstance().MainForm);
         }
 
         private void btnLoadContragents_Click(object sender, EventArgs e) {

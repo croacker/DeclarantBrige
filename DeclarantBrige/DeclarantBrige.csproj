@@ -97,7 +97,6 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="com\asf\configuration\AbstractConfiguration.cs" />
-    <Compile Include="com\asf\context\AbstractContext.cs" />
     <Compile Include="com\asf\declarantbrige\AbstractContext.cs" />
     <Compile Include="com\asf\declarantbrige\checker\DeclarationChecker.cs" />
     <Compile Include="com\asf\declarantbrige\checker\IModelChecker.cs" />
@@ -128,12 +127,6 @@
       <DependentUpon>DocumentListForm.cs</DependentUpon>
     </Compile>
     <Compile Include="com\asf\declarantbrige\forms\FormFactory.cs" />
-    <Compile Include="com\asf\declarantbrige\forms\ImportDeclarationWizardFrom.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="com\asf\declarantbrige\forms\ImportDeclarationWizardFrom.Designer.cs">
-      <DependentUpon>ImportDeclarationWizardFrom.cs</DependentUpon>
-    </Compile>
     <Compile Include="com\asf\declarantbrige\forms\ReferenceListForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -212,13 +205,13 @@
     <Compile Include="com\asf\declarantbrige\service\CheckService.cs" />
     <Compile Include="com\asf\declarantbrige\service\ConfigurationService.cs" />
     <Compile Include="com\asf\declarantbrige\service\ContextService.cs" />
-    <Compile Include="com\asf\declarantbrige\service\CsvService.cs" />
+    <Compile Include="com\asf\declarantbrige\service\csv\CsvService.cs" />
     <Compile Include="com\asf\declarantbrige\service\HibernateService.cs" />
     <Compile Include="com\asf\declarantbrige\processing\IProcessingService.cs" />
     <Compile Include="com\asf\declarantbrige\service\ProcessingService.cs" />
     <Compile Include="com\asf\declarantbrige\ServiceFactory.cs" />
     <Compile Include="com\asf\declarantbrige\service\SqlService.cs" />
-    <Compile Include="com\asf\declarantbrige\service\XmlService.cs" />
+    <Compile Include="com\asf\declarantbrige\service\xml\XmlService.cs" />
     <Compile Include="com\asf\declarantbrige\xml\import_contr.cs" />
     <Compile Include="com\asf\declarantbrige\xml\import_decl_11.cs" />
     <Compile Include="com\asf\declarantbrige\xml\import_decl_12.cs" />
@@ -325,7 +318,6 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <None Include="res\check.png" />
-    <None Include="res\logo.png" />
     <None Include="res\erase.png" />
     <None Include="res\close.png" />
     <None Include="res\help.png" />

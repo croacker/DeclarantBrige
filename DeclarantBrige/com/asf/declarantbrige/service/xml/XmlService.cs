@@ -1,8 +1,9 @@
 ﻿using System.IO;
 using System.Xml.Serialization;
+using com.asf.declarantbrige.service;
 using declarant.xml;
 
-namespace com.asf.declarantbrige.service {
+namespace DeclarantBrige.com.asf.declarantbrige.service.xml {
 
     /// <summary>
     /// Сервис для работы с XML-сериализацией

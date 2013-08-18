@@ -25,12 +25,12 @@
         private void InitializeComponent() {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DocumentsListForm));
             this.tsBar = new System.Windows.Forms.ToolStrip();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.dgvDocuments = new System.Windows.Forms.DataGridView();
             this.tsbNew = new System.Windows.Forms.ToolStripButton();
             this.tsbCopy = new System.Windows.Forms.ToolStripButton();
             this.tsbEdit = new System.Windows.Forms.ToolStripButton();
             this.tsbDelete = new System.Windows.Forms.ToolStripButton();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.dgvDocuments = new System.Windows.Forms.DataGridView();
             this.tsBar.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDocuments)).BeginInit();
@@ -48,26 +48,6 @@
             this.tsBar.Size = new System.Drawing.Size(292, 25);
             this.tsBar.TabIndex = 0;
             this.tsBar.Text = "toolStrip1";
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.dgvDocuments);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 25);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(292, 248);
-            this.panel1.TabIndex = 1;
-            // 
-            // dgvDocuments
-            // 
-            this.dgvDocuments.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvDocuments.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvDocuments.Location = new System.Drawing.Point(0, 0);
-            this.dgvDocuments.Name = "dgvDocuments";
-            this.dgvDocuments.ReadOnly = true;
-            this.dgvDocuments.RowHeadersVisible = false;
-            this.dgvDocuments.Size = new System.Drawing.Size(292, 248);
-            this.dgvDocuments.TabIndex = 0;
             // 
             // tsbNew
             // 
@@ -109,6 +89,26 @@
             this.tsbDelete.Text = "toolStripButton4";
             this.tsbDelete.ToolTipText = "Удалить";
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.dgvDocuments);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 25);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(292, 248);
+            this.panel1.TabIndex = 1;
+            // 
+            // dgvDocuments
+            // 
+            this.dgvDocuments.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDocuments.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvDocuments.Location = new System.Drawing.Point(0, 0);
+            this.dgvDocuments.Name = "dgvDocuments";
+            this.dgvDocuments.ReadOnly = true;
+            this.dgvDocuments.RowHeadersVisible = false;
+            this.dgvDocuments.Size = new System.Drawing.Size(292, 248);
+            this.dgvDocuments.TabIndex = 0;
+            // 
             // DocumentsListForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -116,6 +116,7 @@
             this.ClientSize = new System.Drawing.Size(292, 273);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.tsBar);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Name = "DocumentsListForm";
             this.Text = "DocumentListForm";
             this.Shown += new System.EventHandler(this.ListForm_Shown);

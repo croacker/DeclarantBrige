@@ -28,47 +28,26 @@ namespace com.asf.declarantbrige.forms {
 
         public void showAboutForm()
         {
-            AboutForm aboutForm = new AboutForm();
-            aboutForm.ShowInTaskbar = false;
-            aboutForm.FormBorderStyle = FormBorderStyle.FixedToolWindow;
-            aboutForm.ShowDialog(MainForm);
+            new AboutForm().ShowDialog();
         }
 
         public UnitForm getUnitForm(Type type, AbstractContext context)
         {
-            UnitForm form = (UnitForm) getForm(type, context);
-            form.FormBorderStyle = FormBorderStyle.FixedToolWindow;
-            return form;
+            return (UnitForm) getForm(type, context);
         }
 
-        public ReferenceListForm getReferenceListForm(Type type, AbstractContext context)
+        public ReferenceListForm getReferenceList(Type type, AbstractContext context)
         {
-            ReferenceListForm form = (ReferenceListForm) getForm(type, context);
-            form.FormBorderStyle = FormBorderStyle.SizableToolWindow;
-            return form;
+            return (ReferenceListForm) getForm(type, context);
         }
 
-        public DocumentsListForm getDocumentsListForm(Type type, AbstractContext context) {
-            DocumentsListForm form = (DocumentsListForm)getForm(type, context);
-            form.FormBorderStyle = FormBorderStyle.SizableToolWindow;
-            return form;
+        public DocumentsListForm getDocumentsList(Type type, AbstractContext context) {
+            return (DocumentsListForm)getForm(type, context);
         }
 
-        public void showUnitForm(Type type, AbstractContext context) {
-            UnitForm form = (UnitForm)getForm(type, context);
-            form.FormBorderStyle = FormBorderStyle.FixedToolWindow;
-            form.ShowDialog(MainForm);
-        }
-
-        public void showReferenceListForm(Type type, AbstractContext context)
-        {
-            ReferenceListForm form = getReferenceListForm(type, context);
-            form.ShowDialog(MainForm);
-        }
-
-        public void showDocumentsListForm(Type type, AbstractContext context) {
-            DocumentsListForm form = getDocumentsListForm(type, context);
-            form.ShowDialog(MainForm);
-        }
+        //public void showDocumentsListForm(Type type, AbstractContext context) {
+        //    DocumentsListForm form = getDocumentsList(type, context);
+        //    form.ShowDialog(MainForm);
+        //}
     }
 }
